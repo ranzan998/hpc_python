@@ -1,0 +1,50 @@
+#openssl
+>> download openssl tar file.
+>> untar it, go to it's directory
+>>$./config --prefix=/path/to/installation/openssl
+  $make -j
+  $make install -j
+  
+#libffi 
+>> download libffi tar file.
+>> untar it, go to it's directory
+>>$./configure --prefix/path/to/installation/libffi
+  $make -j
+  $make install
+
+#bzip2
+>> download bzip2 tar file.
+>> untar it, go to it's directory
+>> search "Makefile", edit a line in the file from "CC=gcc" to "CC=gcc -fPIC"
+>>$make -j        #directly, no configure
+>>$make install PREFIX=/path/to/installation/bzip
+  
+  
+#zlib
+>> download zlib tar file.
+>> untar it, go to it's directory
+$./configure --prefix/path/to/installation/zlib
+$make -j
+$make install -j
+
+
+#python
+>> download python3.x tar file
+>> untar it, go to it's directory
+>> go to Modules directory, check file "Setup"
+   open and edit the ssl path. zlib, uncomment all.
+
+
+$./configure --prefix=/home/rksahu/programs/python --with-openssl=/home/rksahu/programs/openssl/ LDFLAGS='-L/home/rksahu/programs/libffi/lib64 -L/home/rksahu/programs/bzip2/lib -L/home/rksahu/programs/zlib/lib' CFLAGS="-I/home/rksahu/programs/bzip2/include" CPPFLAGS='-I/home/rksahu/programs/zlib/inlude' --enable-optimizations
+make -j
+make install
+
+
+
+
+
+
+
+
+
+
