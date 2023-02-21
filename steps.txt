@@ -8,13 +8,26 @@ i) download source code of Python3.x version, openssl, zlib, bzip2, libffi, all 
 ii) Unzip the contents of each and keep all in a single folder titled "libraries".
 
 iii) use the follwing commands to install all the libraries.
-         ./configure    (./config in case of openssl)
-         make
-         make install
+         $./configure   --prefix=/home/path/to/installation/folder/   #./config in case of openssl
+         $make                                         #make -j to use all available cores to do this, faster.
+         $make install
     do this for all extracted files, in their respective directory, but leave the python3.x extracted directory for later use.
 
+Instead of "make install", use "make install PREFIX=/path/to/folder/ " in the case of zlib.
 
 iv) make necessary changes in .bashrc (given in .bashrc.txt), so that the it'd point to the zlib, and libffi directories/header files when we call python3.x.
 
 v) source the .bashrc
-        source ~/.bashrc
+        $source ~/.bashrc
+vi) run the below code which calls the configure file along with prefixes, which points to the installation folder/installed files of above installed packages. 
+        $./configure --prefix=/path/to/folder_of_python_installation --with-openssl=/home/path/to/openssl LDFLAGS='-L/home//path/to/folder/libffi/lib64 -L/home/path/to/folder/bzip2/lib -L/home/path/to/folder/zlib/lib' CFLAGS="-I/home/path/to/folder/bzip2/include" CPPFLAGS='-I/home/path/to/folder/zlib/inlude'
+        $make -j
+        $make install
+
+ --prefix=/path/to/folder_of_python_installation, is the directory where you want to install python3.x. there's an alias set in the .bashrc file, which will point to this python, when python is invoked.
+ 
+ 
+
+
+
+    
