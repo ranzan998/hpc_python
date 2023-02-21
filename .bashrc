@@ -3,7 +3,9 @@
 PATH=$PATH:~/.local/bin
 export PATH=$PATH:/home/rksahu/bin:/home/rksahu/programs/python/bin #path to both python 3.8 and pip
 alias python='/home/rksahu/programs/python/bin/python3.8'
+alias pip='/home/rksahu/programs/python/bin/pip3.8'
 
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/home/path/to/openssl/lib        #added by self.
 ############..... zlib..... ##################
 PATH=$PATH:/home/rksahu/programs/zlib/
 export PATH
