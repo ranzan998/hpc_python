@@ -4,6 +4,8 @@
 >>$./config --prefix=/path/to/installation/openssl
   $make -j
   $make install -j
+
+## libssl.1.1 error, mostly because path to the shared library isn't specified
   
 #libffi 
 >> download libffi tar file.
