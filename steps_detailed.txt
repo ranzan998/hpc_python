@@ -6,6 +6,7 @@
   $make install -j
 
 ## libssl.1.1 error, mostly because path to the shared library isn't specified
+## export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib64
   
 #libffi 
 >> download libffi tar file.
