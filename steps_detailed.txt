@@ -11,7 +11,7 @@
 #libffi 
 >> download libffi tar file.
 >> untar it, go to it's directory
->>$./configure --prefix/path/to/installation/libffi
+>>$./configure --prefix=/path/to/installation/libffi
   $make -j
   $make install
 
