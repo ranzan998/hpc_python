@@ -14,6 +14,13 @@
 >>$./configure --prefix=/path/to/installation/libffi
   $make -j
   $make install
+     ##### during installation.
+      $libffi='/path/to/libffi'
+       $./configure \
+       LDFLAGS="-L${libffi}/lib64 -Wl,--rpath=${libffi}/lib64" \
+       CFLAGS="-I${libffi}/include" \
+       PKG_CONFIG_PATH="${libffi}/lib/pkgconfig"
+    ##it's because ./configure couldn't find libffi for somereason
 
 #bzip2
 >> download bzip2 tar file.
@@ -32,11 +39,14 @@ $make install -j
 
 
 #xz-devel      #it is because xarray import shower error _lzma couldn't be imported!!
-download package,
-unzip the zip.file>> you'll see a tar.gz file. >> untar it
+download rpm package,
+rpm2cpio xz-5.2.2-1.el7.src.rpm | cpio -id
+>> you'll see a tar.gz file. >> untar it
 ./configure --prefix=/path/to/installation/xz
 make -j 2
 make install -j 2
+
+########do same for sqlite and gdbm
 
 #python
 >> download python3.x tar file
