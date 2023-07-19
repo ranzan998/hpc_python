@@ -20,7 +20,7 @@
        LDFLAGS="-L${libffi}/lib64 -Wl,--rpath=${libffi}/lib64" \
        CFLAGS="-I${libffi}/include" \
        PKG_CONFIG_PATH="${libffi}/lib/pkgconfig"
-    ##it's because ./configure couldn't find libffi for somereason
+    ##it's because ./configure couldn't find libffi for some reason. DO IMPLEMENT DURING PYTHON INSTALLATION
 
 #bzip2
 >> download bzip2 tar file.
