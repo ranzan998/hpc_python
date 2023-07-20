@@ -71,7 +71,8 @@ $ ./configure --prefix=/home/rksahu/programs/python --with-openssl=/home/rksahu/
 
 
 
-
+##further >>>>> tried to do. but not successfully, make corresponding changes in .bashrc, and Setup of Python3.?/Module
+like commenting,uncommenting stuffs
 ####to add sqlite, gdbm, xz-dev utils
  ./configure --prefix=/home/rksahu/programs/python --with-openssl=/home/rksahu/programs/openssl/ LDFLAGS='-L/home/rksahu/programs/libffi/lib64 -L/home/rksahu/programs/bzip2/lib -L/home/rksahu/programs/zlib/lib' CFLAGS="-I/home/rksahu/programs/bzip2/include" CPPFLAGS='-I/home/rksahu/programs/zlib/inlude'     LDFLAGS="-L${libffi}/lib64 -Wl,--rpath=${libffi}/lib64"     CFLAGS="-I${libffi}/include"     PKG_CONFIG_PATH="${libffi}/lib/pkgconfig"     LDFLAGS="-L${xz}/lib64 -Wl,--rpath=${xz}/lib64"     CFLAGS="-I${xz}/include"     PKG_CONFIG_PATH="${xz}/lib/pkgconfig"     LDFLAGS="-L${gdbm}/lib64 -Wl,--rpath=${gdbm}/lib64"     CFLAGS="-I${gdbm}/include"     PKG_CONFIG_PATH="${gdbm}/lib/pkgconfig"     LDFLAGS="-L${sqlite}/lib64 -Wl,--rpath=${sqlite}/lib64"     CFLAGS="-I${sqlite}/include"     PKG_CONFIG_PATH="${sqlite}/lib/pkgconfig"
 
